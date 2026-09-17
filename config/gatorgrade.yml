@@ -1,0 +1,113 @@
+# perform checks on a file
+
+# check the technical writing for various characteristics
+- writing/reflection.md:
+    - description: Ensure that writing/reflection.md file exists.
+      check: ConfirmFileExists
+    - description: Complete all TODOs, remove the TODO markers in writing/reflection.md
+      check: MatchFileFragment
+      options:
+        fragment: TODO
+        count: 0
+        exact: true
+    - description: Add your name and then delete the 'Add Your Name Here' prompt in writing/reflection.md
+      check: MatchFileFragment
+      options:
+        fragment: "Add Your Name Here"
+        count: 0
+        exact: true
+
+# check the code for various characteristics
+- src/program1_creating_dataframes.R:
+    - description: src/program1_creating_dataframes.R -> Ensure that file exists.
+      check: ConfirmFileExists
+    - description: src/program1_creating_dataframes.R -> Complete all TODOs and fix all BUGs, then remove these tags.
+      check: MatchFileFragment
+      options:
+        fragment: TODO
+        count: 0
+        exact: true
+    - description: src/program1_creating_dataframes.R -> Add your name and then delete the 'Add Your Name Here'
+      check: MatchFileFragment
+      options:
+        fragment: "Add Your Name Here"
+        count: 0
+        exact: true
+
+- src/program2_builtin_datasets.R:
+    - description: src/program2_builtin_datasets.R -> Ensure that file exists.
+      check: ConfirmFileExists
+    - description: src/program2_builtin_datasets.R -> Complete all TODOs and fix all BUGs, then remove these tags.
+      check: MatchFileFragment
+      options:
+        fragment: TODO
+        count: 0
+        exact: true
+    - description: src/program2_builtin_datasets.R -> Add your name and then delete the 'Add Your Name Here'
+      check: MatchFileFragment
+      options:
+        fragment: "Add Your Name Here"
+        count: 0
+        exact: true
+
+- src/program3_reading_csv.R:
+    - description: src/program3_reading_csv.R -> Ensure that file exists.
+      check: ConfirmFileExists
+    - description: src/program3_reading_csv.R -> Complete all TODOs and fix all BUGs, then remove these tags.
+      check: MatchFileFragment
+      options:
+        fragment: TODO
+        count: 0
+        exact: true
+    - description: src/program3_reading_csv.R -> Add your name and then delete the 'Add Your Name Here'
+      check: MatchFileFragment
+      options:
+        fragment: "Add Your Name Here"
+        count: 0
+        exact: true
+
+- src/program4_statistical_analysis.R:
+    - description: src/program4_statistical_analysis.R -> Ensure that file exists.
+      check: ConfirmFileExists
+    - description: src/program4_statistical_analysis.R -> Complete all TODOs and fix all BUGs, then remove these tags.
+      check: MatchFileFragment
+      options:
+        fragment: TODO
+        count: 0
+        exact: true
+    - description: src/program4_statistical_analysis.R -> Add your name and then delete the 'Add Your Name Here'
+      check: MatchFileFragment
+      options:
+        fragment: "Add Your Name Here"
+        count: 0
+        exact: true
+
+- src/program5_data_visualization.R:
+    - description: src/program5_data_visualization.R -> Ensure that file exists.
+      check: ConfirmFileExists
+    - description: src/program5_data_visualization.R -> Complete all TODOs and fix all BUGs, then remove these tags.
+      check: MatchFileFragment
+      options:
+        fragment: TODO
+        count: 0
+        exact: true
+    - description: src/program5_data_visualization.R -> Add your name and then delete the 'Add Your Name Here'
+      check: MatchFileFragment
+      options:
+        fragment: "Add Your Name Here"
+        count: 0
+        exact: true
+
+- src/shiny_app.R:
+    - description: src/shiny_app.R -> Ensure that the completed Shiny app file exists.
+      check: ConfirmFileExists
+
+- data/student_survey.csv:
+    - description: data/student_survey.csv -> Ensure that the synthetic dataset exists.
+      check: ConfirmFileExists
+
+# Check for regular commits (not all at the end)
+- description: At least 5 commits to show iterative work
+  check: CountCommits
+  options:
+    count: 5
