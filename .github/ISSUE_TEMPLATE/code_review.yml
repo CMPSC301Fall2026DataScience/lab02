@@ -42,9 +42,10 @@ body:
       options:
         - label: "The author can explain how they built a data frame with `data.frame()` and how to access a specific row, column, and logical subset of it"
         - label: "The author can explain the difference between dropping rows with missing data and imputing them with `na.rm = TRUE` or a mean fill, and when each strategy is appropriate"
-        - label: "The author can explain the difference between `aggregate()` and `tapply()` for computing grouped summaries, and why `cor()` needed `use = \"complete.obs\"`"
-        - label: "The author can explain what a boxplot, histogram, and scatterplot (with `abline()`/`lm()` trend line) each reveal about a dataset that the others do not"
-        - label: "The author can explain what `pairs()` shows when given a range of columns from `iris`, and what would change if the range were incorrect"
+        - label: "The author can explain the difference between `cat()` and `print()` and when to use each"
+        - label: "The author can explain the difference between a boxplot, histogram, and scatterplot, and when to use each"
+        - label: "The author can explain what print(students$Gpa) prints."
+        - label: "The author can explain what the `summary()` function provides about a dataset and how to interpret it"
         - label: "The author explored the Shiny app and can explain how choosing a different dataset or plot type changes the reactive data frame passed to the plot"
         - label: "The author described their process well, communicating confidence and understanding of their own code"
   - type: textarea
